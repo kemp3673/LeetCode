@@ -3,10 +3,7 @@
  * @return {number}
  */
 var pivotIndex = function(nums) {
-    let indexResult = -1;
-    let leftSum = 0;
-    let rightSum = 0;
-    
+    let indexResult = -1;    
     for (var i = 0; i < nums.length; i++) {
         if (leftArray(nums, i) === rightArray(nums, i)) {
             return i;
@@ -16,17 +13,17 @@ var pivotIndex = function(nums) {
 };
 
 var leftArray = function(nums, index) {
-    let leftResult = 0;
-    for (var j = 0; j < index; j++) {
-        leftResult +=  nums[j];
-    }
+    let leftArray = nums.slice(0, index);
+    let leftResult = leftArray.reduce((accum, value) => {
+        return accum + value
+    }, 0);
     return leftResult;
 };
 
 var rightArray = function(nums, index) {
-    let rightResult = 0;
-    for (var k = index + 1; k < nums.length; k++) {
-        rightResult +=  nums[k];
-    }
+    let rightArray = nums.slice(index + 1);
+    let rightResult = rightArray.reduce((accum, value) => {
+        return accum + value
+    }, 0);
     return rightResult;
 };
