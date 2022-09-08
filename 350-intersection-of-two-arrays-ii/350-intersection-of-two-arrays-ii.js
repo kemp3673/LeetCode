@@ -5,7 +5,6 @@
  */
 var intersect = function(nums1, nums2) {
     let result = [];
-    let tracking = {};
     let shortest = nums2.slice();
     let longest = nums1;
     if (nums1.length < nums2.length) {
