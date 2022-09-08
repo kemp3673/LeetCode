@@ -14,9 +14,7 @@ var intersect = function(nums1, nums2) {
     } 
     for (var i = 0; i < shortest.length; i++) {
         let foundIndex = longest.indexOf(shortest[i]);
-        console.log('current value is ' + shortest[i] + ' Index is ' + foundIndex)
         if (foundIndex >= 0) {
-            console.log('Found ' + shortest[i] + ' at location ' + foundIndex)
             result.push(shortest[i]);
             longest.splice(foundIndex, 1);
         }
