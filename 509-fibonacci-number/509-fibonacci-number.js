@@ -11,7 +11,7 @@ var fib = function(n) {
     // in order to transverse through the sequence we need to track and update what numbers we are currently working with. 
     let a = 0, b = 1, c;
     // a is the left number, b is the right number, and c is a temporary holder that will allow us to shuffle and increment;
-    let num = n;
+    let num = n - 1;
     while (num > 0) {
         c = b; // Holds onto previous right value
         b = a + b // Adds the two numbers and changes right value to the sum of the two
@@ -25,5 +25,5 @@ var fib = function(n) {
         num--;
         // decrement our counter to count down so we stop repeating the process
     }
-    return c; // Return final right (largest) number;
+    return b; // Return final right (largest) number, has to be c as b is ;
 };
