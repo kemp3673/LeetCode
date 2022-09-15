@@ -7,7 +7,7 @@ var longestPalindrome = function(s) {
         return 1;
     }
     let count = 0;
-    let singleLetter = 0;
+    let singleLetter = false;
     let chars = {};
     for (var i = 0; i < s.length; i++) {
         if (chars[s[i]]) {
@@ -25,7 +25,7 @@ var longestPalindrome = function(s) {
             
         }
         if (chars[unique[j]] === 1) {
-            singleLetter++;
+            singleLetter = true;
         }
     }
     if (singleLetter) {
