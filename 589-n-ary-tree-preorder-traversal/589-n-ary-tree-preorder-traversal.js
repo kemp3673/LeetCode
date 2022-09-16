@@ -11,15 +11,15 @@
  * @return {number[]}
  */
 var preorder = function(root) {
-    if (!root) {
-        return [];
-    }
     let result = [];
     
-    var traversal = branch => {
-        result.push(branch.val);
-        if ( branch.children) {
-            branch.children.forEach(child => {
+    var traversal = node => {
+        if (!root) {
+            return;
+        }
+        result.push(node.val);
+        if ( node.children) {
+            node.children.forEach(child => {
             traversal(child);
             });
         } else {
