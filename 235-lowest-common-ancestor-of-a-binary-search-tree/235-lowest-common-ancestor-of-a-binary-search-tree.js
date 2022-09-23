@@ -26,11 +26,7 @@ var lowestCommonAncestor = function(root, p, q) {
     };
     
     let helperFunction = (node) => {
-        console.log('big: ', larger);
-        console.log('sml: ', smaller);
-        console.log(node.val, node.val >= smaller.val && node.val <= larger.val)
         if (node.val >= smaller.val && node.val <= larger.val) {
-            console.log('inside');
             result = node;
             return;
         } else if (node.val > larger.val) {
