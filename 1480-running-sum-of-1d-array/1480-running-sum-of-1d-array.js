@@ -3,11 +3,9 @@
  * @return {number[]}
  */
 var runningSum = function(nums) {
-    let sumArray = [];
-    let currentSum = 0;
-    nums.forEach(number => {
-        currentSum = currentSum + number;
-        sumArray.push(currentSum);
-    });
+    let sumArray = [nums[0]];
+    for (var i = 1; i < nums.length; i++) {
+        sumArray.push(nums[i] + sumArray[sumArray.length - 1]);
+    }
     return sumArray;
 };
