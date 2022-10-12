@@ -5,9 +5,11 @@
  */
 var search = function(nums, target) {
     let position = 0;
+    
     if (nums.length === 1 && nums[0] === target) {
         return 0;
     }
+    
     while (nums.length > 1) {
         let mid = Math.floor(nums.length / 2);
         if (nums[mid] === target) {
@@ -22,5 +24,6 @@ var search = function(nums, target) {
             }
         }
     }
+    
     return -1;
 };
