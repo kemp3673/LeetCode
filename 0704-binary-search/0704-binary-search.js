@@ -4,7 +4,6 @@
  * @return {number}
  */
 var search = function(nums, target) {
-    let result = -1;
     let position = 0;
     if (nums.length === 1 && nums[0] === target) {
         return 0;
@@ -23,5 +22,5 @@ var search = function(nums, target) {
             }
         }
     }
-    return result;
+    return -1;
 };
