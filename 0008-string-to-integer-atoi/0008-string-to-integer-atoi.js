@@ -7,10 +7,6 @@ var myAtoi = function(s) {
     let negativeObj = negativeCheck(spaceParsed);
     let numbersOnly = reduceToNumbers(negativeObj.string);
     let rangeCheck = checkRange(numbersOnly * negativeObj.isNegative);
-    // console.log('PARSED: ', spaceParsed);
-    // console.log('NEGATIVE: ', negativeObj);
-    // console.log('NUMBERS: ', numbersOnly);
-    // console.log('RANGE: ', rangeCheck);
     return rangeCheck;    
 };
 
@@ -50,12 +46,10 @@ var reduceToNumbers = function(string) {
     if (result.length === 0) {
         result.push(0);
     }
-    console.log('RESULT INSIDE REDUCE: ', result)
     return Number(result.join(''));
 };
 
 var checkRange = function(num) {
-    console.log(num)
     if (num >= Math.pow(-2, 31) && num <= Math.pow(2, 31) - 1) {
         return num;
     } else if (num < Math.pow(-2, 31)) {
