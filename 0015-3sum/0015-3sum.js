@@ -4,14 +4,6 @@
  */
 var threeSum = function(nums) {
     let result = [];
-    let allSame = [...new Set(nums)];
-    //console.log(allSame)
-    if (allSame.length === 1 && allSame[0] === 0 && nums.length >= 3) {
-        console.log("SAME")
-        return [[0,0,0]];
-    } else if (allSame.length === 1 && allSame[0] !== 0) {
-        return [];
-    };
     
     nums.sort(function(a, b) {
         return a - b;
@@ -19,10 +11,9 @@ var threeSum = function(nums) {
     
     
     for (var i = 1; i < nums.length - 1; i ++) {
-        //if (nums[i] === nums[i-1]) {continue};
         let left = 0;
         let right = nums.length - 1; 
-        console.log(result.indexOf([left, nums[i], right]))
+
         if (result.indexOf([left, nums[i], right]) !== -1) {
             break;
         }
