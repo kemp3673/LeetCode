@@ -38,7 +38,7 @@ var threeSum = function(nums) {
             }
         }
     }
-    console.log(result)
+
     let unique = new Set(result.map(JSON.stringify));
     return Array.from(unique).map(JSON.parse);
 };
