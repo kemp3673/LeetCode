@@ -20,17 +20,17 @@ var pathSum = function(root, targetSum) {
   const path = [];
   // Helper function
   const helper = function(node, sum) {
-      // Check is node is null
+      // Check if node is null
       if (!node) return;
       // Add current node value to path array
       path.push(node.val);
       // Check if node is a leaf
       if (!node.left && !node.right) {
-          // If leaf, check is equals sum
+          // If leaf, check is equals to sum
           if (sum === node.val) {
               // Add to results array
               result.push([...path]);
-          }
+          } else return;
       }
       // Recursively call left node
       helper(node.left, sum - node.val);
