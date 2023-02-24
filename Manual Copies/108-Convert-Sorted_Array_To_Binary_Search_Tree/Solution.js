@@ -10,7 +10,7 @@
  * @param {number[]} nums
  * @return {TreeNode}
  */
- var sortedArrayToBST = function(nums) {
+var sortedArrayToBST = function(nums) {
   // Base case if array.length === 0
   if (nums.length === 0) {
     return null;
